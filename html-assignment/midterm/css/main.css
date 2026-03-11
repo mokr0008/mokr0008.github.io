@@ -1,0 +1,284 @@
+/* warm earthy colour palette for deep shark */
+:root {
+  --sand: #c8a96e;
+  --sand-light: #f5ede0;
+  --rust: #8b4513;
+  --rust-mid: #a0522d;
+  --mud: #3d2b1f;
+  --body-txt: #4a3728;
+  --white: #ffffff;
+  --form-bg: #fdf6ee;
+  --divider: #dcc9b0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--body-txt);
+  background-color: var(--sand-light);
+}
+
+/* banner */
+#banner {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+#banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+/* title over banner */
+#banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* navbar */
+#navbar {
+  background-color: var(--white);
+  border-bottom: 2px solid var(--sand);
+}
+
+#navbar-list {
+  list-style: none;
+  display: flex;
+  width: 100%;
+}
+
+.navbar-item {
+  flex: 1;
+  border-right: 1px solid var(--divider);
+}
+
+.navbar-item:last-child {
+  border-right: none;
+}
+
+.navbar-link {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mud);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.navbar-link:hover {
+  background-color: var(--sand-light);
+  color: var(--rust);
+}
+
+/* white content area */
+.page-content {
+  background-color: var(--white);
+  padding: 2.2rem clamp(1rem, 4vw, 2.8rem) 3rem;
+}
+
+/* section headings */
+.block-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--mud);
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+/* story section */
+#shark-story {
+  margin-bottom: 2.8rem;
+  padding-bottom: 2.8rem;
+  border-bottom: 1px solid var(--divider);
+  overflow: hidden;
+}
+
+/* small shark image floats left */
+#shark-pic {
+  float: left;
+  width: 178px;
+  height: 138px;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 1.3rem 0.8rem 0;
+  border: 3px solid var(--sand-light);
+  border-radius: 6px;
+}
+
+.para {
+  font-size: 0.88rem;
+  color: var(--body-txt);
+  text-align: justify;
+  margin-bottom: 0.7rem;
+}
+
+/* facts */
+#shark-facts {
+  margin-bottom: 2.8rem;
+  padding-bottom: 2.8rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.facts-ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.facts-ul__li {
+  font-size: 0.88rem;
+  color: var(--body-txt);
+  margin-bottom: 0.4rem;
+}
+
+/* contact */
+#reach-out {
+  margin-bottom: 1rem;
+}
+
+#the-form {
+  background-color: var(--form-bg);
+  border: 1px solid var(--divider);
+  padding: 1.6rem;
+}
+
+/* label + input wrapper */
+.input-block {
+  margin-bottom: 1rem;
+}
+
+.input-block__label {
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mud);
+  margin-bottom: 0.3rem;
+}
+
+.input-block__field {
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.88rem;
+  font-family: "Libre Baskerville", serif;
+  color: var(--body-txt);
+  background: var(--white);
+  border: 1px solid var(--divider);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-block__field:focus {
+  border-color: var(--rust);
+}
+
+.input-block__field--tall {
+  resize: vertical;
+  min-height: 88px;
+}
+
+/* radio group */
+.yesno {
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.yesno legend {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mud);
+  margin-bottom: 0.4rem;
+}
+
+.yesno__options {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.yesno__options label {
+  font-size: 0.88rem;
+  color: var(--body-txt);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+/* send button */
+.go-btn {
+  display: inline-block;
+  padding: 0.42rem 1.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: var(--rust);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.go-btn:hover {
+  background-color: var(--rust-mid);
+}
+
+/* footer */
+#footer {
+  background-color: var(--mud);
+  border-top: 1px solid var(--rust);
+  padding: 0.65rem clamp(1rem, 4vw, 2.8rem);
+  text-align: right;
+  font-size: 0.78rem;
+  color: var(--sand);
+}
+
+/* large screens */
+@media (min-width: 1024px) {
+  #banner {
+    height: 280px;
+  }
+
+  .page-content {
+    padding: 3rem 8.2rem 4rem;
+  }
+}
